@@ -25,7 +25,7 @@ def pic_upload(request):
         for content in pic.chunks():
             f.write(content)
     PicTest.objects.create(pic = 'booktest/%s'%pic.name)  
-    return HttpResponse("上传成功~")
+    return HttpResponse("上传图片成功, 如需继续上传,请刷新.")
 
 
 
